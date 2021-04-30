@@ -6,6 +6,7 @@
 <script src="./js/load.js"></script>
 <script src="./js/start.js"></script>
 <script src="./js/main.js"></script>
+<script src="./js/gameover.js"></script>
 <style>
 body {
   margin: 0;
@@ -19,10 +20,11 @@ var config = {
     physics: {
         default: 'arcade',
         arcade: {
-            debug: false
+            gravity: { y: 0 },
+            debug: true
         }
     },
-    scene: [loadScene, startScene, mainScene],
+    scene: [loadScene, startScene, mainScene, gameOverScene],
 };
 var game = new Phaser.Game(config);
 </script>
